@@ -1,0 +1,335 @@
+/*ADICIONAR BOLSA*/
+/*Forma do retangulo*/
+main section#bolsas{
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 2.2vw;
+    grid-row-gap: 30px;
+}
+@media(max-width:1360px){
+    main section#bolsas{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width:1000px){
+    main section#bolsas{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+main section#bolsas > div{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.20);
+    width: 280px;
+    height: 420px;
+}
+
+@media(max-width:670px){
+    main section#bolsas{
+        grid-template-columns: 1fr
+    }
+    main section#bolsas > div{
+        width: 100%;
+        height: 265px;
+    }
+}
+
+main section#bolsas div#cx_add_bolsa{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: white;
+}
+main section#bolsas div#cx_add_bolsa div p{
+    text-align: center;
+}
+main section#bolsas div#cx_add_bolsa div h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+main section#bolsas div#cx_add_bolsa img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:670px){
+    main section#bolsas div#cx_add_bolsa img{
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+}
+
+/*Mexendo Agora*/
+main section#bolsas > div.cx_bolsa_adicionada{
+    background: white;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    width: 90vw;
+    height: 100%;
+    padding: 25px;
+} 
+
+main div.cx_bolsa_adicionada div.superior{
+    border-bottom: 4px solid #EDEFEF;
+    width: 100% ; 
+    padding-bottom: 25px; 
+}
+
+main div.cx_bolsa_adicionada div.superior img{
+    height: 85px;
+    width: 280px ;
+    margin-bottom: 25px;
+}
+
+main div.cx_bolsa_adicionada div.superior span.nome-universidade{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+main div.cx_bolsa_adicionada div.superior span.nome-curso{
+    display: block;
+    font-weight: 700;
+    color: #007A8D;
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+main div.cx_bolsa_adicionada div.superior span.nota-universidade{
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+/*FIM - Parte de cima*/
+/*Parte Central*/
+main div.cx_bolsa_adicionada div.central{
+    padding: 25px 0;
+    width: 100%;
+    border-bottom: 4px solid #EDEFEF;
+}
+
+main div.cx_bolsa_adicionada div.central div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+main div.cx_bolsa_adicionada div.central span{
+    display: inline-block;
+}
+
+main div.cx_bolsa_adicionada div.central span.tipo-curso{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+main div.cx_bolsa_adicionada div.central span.periodo::before{
+    content: "•";
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+main div.cx_bolsa_adicionada div.central span.periodo{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+main div.cx_bolsa_adicionada div.central span.inicio-aulas,span.data-inicio{
+    font-size: 18px;
+}
+
+/*FIM - Parte Central*/
+/*Parte Inferior*/
+main div.cx_bolsa_adicionada div.inferior span{
+    display: inline-block;
+}
+
+main div.cx_bolsa_adicionada div.inferior span.situacao-bolsa{
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+main div.cx_bolsa_adicionada div.inferior span.preco-bruto{
+    font-size: 16px;
+    display: block;
+    text-decoration: line-through;
+    font-weight: 550;
+    margin-bottom: 12px; 
+}
+
+main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto::before,
+main div.cx_bolsa_adicionada div.inferior span.preco-bruto::before{
+    content: "R$ ";
+}
+
+main div.cx_bolsa_adicionada div.inferior span.preco-bruto.facul-indisponivel{
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+main div.cx_bolsa_adicionada div.inferior span.preco-bruto.facul-indisponivel::before{
+    display: none;
+}
+
+main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto{
+    font-size: 26px;
+    font-weight: 700;
+    color: #0FA866 ;
+    margin-bottom: 40px;
+}
+
+main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto::after{
+    content: "/mês";
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 5px;
+    color: #1F2D30;
+}
+
+main div.inferior span.preco-cdesconto.facul-indisponivel{
+    display: none;
+} 
+
+main div.cx_bolsa_adicionada div.botoes{
+    display: flex;
+    justify-content: space-between;            
+    width: 100%;
+}
+
+main div.cx_bolsa_adicionada button{
+    height: 60px;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+main div.cx_bolsa_adicionada button.botao-excluir{
+    width: 155px;
+    background: white;
+    border: 2px solid #007A8D;
+    color: #007A8D;
+    cursor: pointer;
+}
+
+main div.cx_bolsa_adicionada button.ver-oferta{
+    width: 215px;
+    background: #FDCB13;
+    border: 2px solid #DE9E1F;
+    color: #1E2C30;
+    cursor: pointer;
+}
+
+main div.cx_bolsa_adicionada button.ver-oferta:disabled{
+    background: #CACDCD;
+    border: 2px solid #81898A;
+    color:#81898A;
+    cursor: auto;
+}
+
+@media(min-width:1000px){
+    main section#bolsas > div.cx_bolsa_adicionada{
+        width: 280px;
+        height: 420px;
+    }
+    
+    main div.cx_bolsa_adicionada div.superior{
+        padding-bottom: 15px; 
+    }
+
+    main div.cx_bolsa_adicionada div.superior img{
+        height: 35px;
+        width: 140px ;
+        margin-bottom: 10px;
+    }
+
+    main div.cx_bolsa_adicionada div.superior span.nome-universidade{
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    main div.cx_bolsa_adicionada div.superior span.nome-curso{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    
+    main div.cx_bolsa_adicionada div.superior span.nota-universidade{
+        font-size: 15px;
+    }
+
+    main div.cx_bolsa_adicionada div.central{
+        padding: 15px 0;
+    }
+
+    main div.cx_bolsa_adicionada div.central div{
+        margin-bottom: 10px;
+    }
+
+    main div.cx_bolsa_adicionada div.central span.tipo-curso{
+        font-size: 14px;
+    }
+
+    main div.cx_bolsa_adicionada div.central span.periodo{
+        font-size: 14px;
+    }
+
+    main div.cx_bolsa_adicionada > div.central span.inicio-aulas,span.data-inicio{
+        font-size: 13px;
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.situacao-bolsa{
+        margin: 20px 0;
+        font-size: 12px;
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-bruto{
+        margin-bottom: 9px;
+        font-size: 12px; 
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-bruto.facul-indisponivel{
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        margin: 0 5px 25px 5px;
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto{
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    main div.cx_bolsa_adicionada button{
+        height: 38px;
+        font-size: 16px;
+    }
+
+    main div.cx_bolsa_adicionada button.ver-oferta{
+        width: 120px;
+    }
+
+    main div.cx_bolsa_adicionada button.botao-excluir{
+        width: 85px;
+    }
+}
+
+/*FIM - Parte Inferior*/
+/*Fim Mexendo Agora*/

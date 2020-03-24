@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quero Educação</title>
+	<link rel="stylesheet" href="css/pagina.css">
+	<link rel="stylesheet" href="css/modal.css">
+	<link rel="stylesheet" href="css/bolsas_favoritas.css">
+</head>
+
+<body>
+	
+	
+	
+	<header>
+		
+		<section id="topo" class="container">
+
+			<div id="info-menu">
+
+				<img src="imgs/info-blue.png" alt="">
+				<span class="invisivel-desk">Ajuda</span>
+				<span><!--Conteúdo via CSS, linha 160--></span>
+
+			</div>
+
+			<hr>
+			
+			<div id="whats">
+
+				<img src="imgs/whats.png" alt="">
+				<div>
+					<span>0800 123 2222</span>
+					<span class="complemento">Envie mensagem ou ligue</span>
+				</div>
+
+			</div>
+
+			<div id="logo">
+				<h1>Quero Bolsa</h1>
+				<img src="imgs/logo-querobolsa.png" alt="">
+			</div>
+
+			<hr>
+
+			<div id="login-menu">
+				<span class="invisivel-desk">Conta</span>
+				<span><!--Conteúdo via CSS, linha 164--></span>
+				<img src="imgs/user.png" alt="">
+			</div>
+
+		</section>
+
+		<nav class="visivel-desk">
+			<ul class="container">
+				<li><a href="">Minha Conta</a></li>
+				<li><a href="">Pré-matrículas</a></li>
+				<li class="pgatual"><a href="">Bolsas favoritas</a></li>
+			</ul>
+		</nav>
+
+		<nav class="invisivel-desk">
+			<ul class="container">
+				<li><a href="">Minha Conta</a></li>
+				<li>
+					<select name="Menu">
+						<option selected>Menu</option>
+						<option value=""><a href="">Pré-matrículas</a></option>
+						<option value=""><a href="">Bolsas favoritas</a></option>
+					</select>
+				</li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<main class="container">
+		<section id="caminho-user">
+			<nav>
+				<ul>
+					<li>
+						<a href="">
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span>/ Minha conta</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span>/ Bolsas favoritas</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+
+		<section id="nomedapg">
+			<h2>Bolsas favoritas</h2>
+			<p>
+				Adicione bolsas de cursos e faculdades do seu interesse e
+				receba atualizações com as melhores ofertas disponíveis.
+			</p>
+		</section>
+
+		<section id="selecao-semestre">
+			<div>
+				<button id="todos_semestres" class="pgatual">  Todos os semestres </button>
+				<button id="segundo-semestre"> 2º semestre de 2019</button>
+				<button id="primeiro-semestre"> 1º semestre de 2020</button> <!-- Trocar por botoes -->
+			</div>
+		</section>
+
+		<section id="bolsas">
+
+			<div id="cx_add_bolsa">
+				<div>
+					<img src="imgs/more.png" alt="">
+					<h2>Adicionar bolsa</h2>
+					<p>Clique para adicionar bolsas de </p>
+					<p>cursos do seu interesse</p>
+				</div>
+			</div>
+
+			<div class="cx_bolsa_adicionada">
+				
+				<div class="superior">
+					<img src="https://www.tryimg.com/u/2019/04/16/anhanguera.png" alt="">
+
+					<span class="nome-universidade">
+						Anhanguera
+					</span>
+					<span class="nome-curso">
+						Arquitetura e Urbanismo
+					</span>
+					<span class="nota-universidade">
+						3.8
+					</span>
+					<span class="estrelas-facul">
+						<!-- ⭐⭐⭐⭐⭐ -->
+					</span>
+				</div>
+			
+				<div class="central">
+					<div>
+						<span class="tipo-curso"> Presencial </span>
+						<span class="periodo">Noite</span>
+					</div>
+					<span class="inicio-aulas">Início das aulas em:</span>
+					<span class="data-inicio">05/07/2019</span>
+				</div>
+			
+				<div class="inferior">
+					<span class="situacao-bolsa">Mensalidade com o Quero Bolsa:</span>
+					<span class="preco-bruto">1.487,31</span>
+					<span class="preco-cdesconto">453,63</span>
+				</div>
+			
+				<div class="botoes">
+					<button class="botao-excluir" value="oo">
+						Excluir
+					</button>
+					<button class="ver-oferta">
+						Ver Oferta
+					</button>
+				</div>
+
+			</div>
+
+
+		</section>
+
+		
+
+	</main>
+
+	<footer>
+		<section id="contatos">
+			<!--Mudar esse section por div-->
+			<ul>
+				<li id="cxwhats-mobile">
+					<img src="imgs/whats-white.png" alt="">
+
+					<div>
+						<h2 id="numero">0800 123 2222</h2>
+						<p><span class="invisivel-mobile">Seg - Sex 8h-22h</span></p>
+					</div>
+				</li>
+
+				<li>
+					<img src="imgs/comments.png" alt="">
+
+					<div>
+						<h2 id="chat">Chat <span class="invisivel-mobile"> ao vivo </span></h2>
+						<!--TUDO VIRA SPAN-->
+						<p class="invisivel-mobile">Seg - Sex 8h-22h</p>
+					</div>
+
+				</li>
+
+				<li id="cx-email">
+					<img src="imgs/email.png" alt="">
+					<div>
+						<h2 id="email"><span class="invisivel-mobile"> Mande um </span>e-mail</h2>
+						<p class="invisivel-mobile">Respondemos rapidinho</p>
+					</div>
+
+				</li>
+
+				<li>
+					<img src="imgs/info-white.png" alt="">
+
+					<div>
+						<h2 id="ajuda"><span class="invisivel-mobile"> Central de </span>ajuda</h2>
+						<p class="invisivel-mobile">Encontre todas as respostas</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<section id="mensagem">
+			<p>Feito com ♡ pela Quero Educação</p>
+		</section>
+	</footer>
+
+	<section id="background-modal">
+		
+
+		<div id="cx-modal">
+			<button id="botao-fechar">✕</button>
+
+			<h2>Adicionar bolsa</h2>
+			<h3>Filtre e adicione as bolsas de seu interesse</h3>
+			
+			<section id="filtros">
+				<div>
+					<label for="selecione-cidade">selecione sua cidade</label>
+					<select name="selecione-cidade" id="selecione_cidade">
+						<option value=""></option>
+					</select>
+				</div>
+			
+				<div>
+					<label for="selecione-curso">selecione o curso de sua preferência</label>
+					<select name="selecione-curso" id="selecione_curso">
+						<option value=""></option>
+					</select>
+				</div>
+
+				<div id="tipo-curso"> <!--Troquei esse id, era "escolhas"-->
+					<label for="modalidade">Como você quer estudar?</label><!--trocar esse label por span-->
+
+					<div>
+						<div id="cx-presencial">
+							<input type="checkbox" name="presencial" id="modalidade_presencial">
+							<label for="modalidade_presencial">Presencial</label>
+						</div>
+
+						<div id="cx-distancia">
+							<input type="checkbox" name="distancia" id="modalidade_distancia">
+							<label for="modalidade_distancia">À distância</label>
+						</div>
+					</div>	
+
+				</div>
+
+				<div id="selecao-pode-pagar">
+					<label for="range">Até quanto pode pagar?</label>
+					<span id="valor-pd-pgar"><!--Valor adicionado por "animacao-modal.js"--></span>
+					<input type="range" id="range-pd-pagar" min="200" max="1500" step="100" value="1500">
+				</div>
+
+				<div id="topo-resultados"> <!--Trocar id por secao-lista-faculdades-->
+					<h2>Resultado:</h2>
+					<div>
+						<span>Ordenar por</span>
+						<select name="Ordenar por" id="Ordenar_por">
+							<option value="" selected>Nome da Faculdade</option>
+						</select>
+					</div>
+				</div>
+
+			</section>
+			
+			<section id="resultados">
+
+				<div class="faculdades">
+					<input type="checkbox" name="checkbox-facul" id="checkbox-facul" class="checkbox-facul">
+					<label for="checkbox-facul">
+						
+						<img src="" alt="">
+						<div>
+							<div>
+								<span id="curso">Administração</span>
+								<span id="formacao">Bacharelado</span>
+							</div>
+							<div>
+								<span id="bolsa">Bolsa de 50%</span>
+								<span id="preco">R$374/mês</span>
+							</div>
+						</div>
+					</label>
+				</div> 
+
+			</section>
+
+			<div id="botoes">
+				<button id="cancelar">Cancelar</button>
+				<button id="adicionar" disabled type="reset">Adicionar bolsa(s)</button>
+			</div>
+
+		</div>
+		<!--Fim cx-modal-->
+	</section>
+	
+	<!--Fim do background do modal-->
+	<script src="scripts/animacao-modal.js"></script>
+	<script src="scripts/fazer-lista-facul.js" ></script>
+	<script src="scripts/filtros.js" ></script>
+	<script src="scripts/gerar-opcoes-filtro.js"></script>
+	<script src="scripts/faculs.js"></script>
+	<!--COlocar o window.onload e botar ele la pra cima-->
+</body>
+
+</html>

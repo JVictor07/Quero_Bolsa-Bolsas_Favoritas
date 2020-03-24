@@ -1,0 +1,452 @@
+/* ====================BACKGROUND====================== */
+    section#background-modal{
+        background: rgb(31, 45, 48, 0.88);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+    section#background-modal.mostrar{
+        display: flex;
+    }
+
+    @keyframes modal {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -120px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    section#background-modal.mostrar{
+        animation: modal 1s;
+    }
+    @media (min-width:550px){
+        section#background-modal{
+            height: 100vh;
+        }
+    }
+/*===================FIM DO BACKGROUND=================*/
+
+/*==================== BUTTON FECHAR =====================*/
+    div#cx-modal button#botao-fechar{
+        background: none;
+        border: none;
+        position: absolute;
+        top: -45px;
+        right: 0%;
+        display: inline;
+        cursor: pointer;
+        outline: none;
+
+        font-size: 28px;
+        font-weight: bold;
+        color:white;
+    }
+/*=================== FIM BUTTON FECHAR ======================*/
+
+/*====================COMEÇO CAIXA MODAL====================*/
+    section#background-modal > div#cx-modal{
+        position: absolute;
+        padding: 3%;
+        top: 13%;
+        width: 100%;
+        background: white;
+        z-index: 1;
+        margin-bottom: 20%;
+    }
+
+    @media (min-width:750px){
+        section#background-modal > div#cx-modal{
+            width: 750px;
+            top:25%;
+        }
+    }
+/*=================== FIM CAIXA MODAL ===================*/
+/*=================== SECTION FILTROS ===================*/
+
+/*- -------------------- GLOBAIS ------------------------ */
+    section#filtros > div{
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+    }
+
+    div#cx-modal > h2{
+        margin: 0;
+        margin-top: 0;
+    }
+
+    div#cx-modal > h3{
+        margin-top: 5px;
+        margin-bottom: 30px ;
+        font-weight: normal;
+    }
+
+    div#cx-modal > section#filtros > div > label{
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    div#cx-modal > section#filtros > div > select{
+        height: 45px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+/*------------------------FIM GLOBAIS------------------------------ */
+
+/*======================================= FILTROS ========================================*/
+    
+    section#background-modal > div#cx-modal > section#filtros{
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @media (max-width:720px) {
+        section#filtros div{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    /* ---------------------FILTRO POR TIPO DE CURSO------------------------ */
+
+    div#cx-modal section#filtros > div#tipo-curso > div{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        width: 280px;
+    }
+
+    @media (min-width:720px) {
+        section#filtros div#tipo-curso div div:last-of-type label{
+            margin-left: 40px;
+        }
+    }
+
+    section#filtros div#tipo-curso input[type=checkbox]{
+        display: none;
+    }
+
+    section#filtros div#tipo-curso div label{
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    section#filtros div#tipo-curso div label::before{
+        content: "";
+        height: 17px;
+        width: 17px;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius:3px;
+        margin: 0;
+        margin-right: 5px;
+    }
+
+    section#filtros div#tipo-curso div input:checked + label::before{
+        background: #18ACC4 url(/imgs/checkmark.png) no-repeat;
+        background-size: 17px;
+        content: "";
+        position: relative;
+        display: inline-block;
+        border: 2px solid #18ACC4;
+        border-radius:3px;
+    }
+
+    /*-------------------FIM FILTRO POR TIPO DE CURSO-----------------------*/
+
+
+    /* -------------------------- FILTRO POR PREÇO -------------------- */
+    @media(max-width:720px){
+        div#selecao-pode-pagar label{
+            margin-top: 30px;
+        }
+    }
+
+    section#filtros input[type=range]{
+        margin-top:20px;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        background: #18ACC4;
+        outline: none;
+    }
+
+    section#filtros input[type=range]::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        background: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #18ACC4;
+        cursor: pointer;
+    }
+
+    /* --------------------FIM FILTRO POR PREÇO----------------- */
+
+    /* -------------------TOPO AREA DE RESULTADOS -------------- */
+    section#filtros > div#topo-resultados{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 4px solid #EEEFEF;
+    }
+
+    section#filtros > div#topo-resultados h2{
+        width: 100%;
+        align-self: flex-start;
+        font-size: 18px;
+    }
+
+    @media(min-width:720px){
+        section#filtros > div#topo-resultados h2{
+            width: auto;
+        }
+    }
+
+    section#filtros > div#topo-resultados div{
+        display: flex;
+        margin-left: auto;
+        align-self: center;
+        align-items: flex-end;
+    }
+    
+    section#filtros > div#topo-resultados div > span{
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    section#filtros > div#topo-resultados div > select {
+        margin-left: 5px;
+        font-size: 16px;
+        font-weight: 700;
+        color:#007A8D ;
+        height: 20px;
+        border: none;
+        outline: none;
+    }
+    
+    /* --------------FIM TOPO AREA DE RESULTADOS--------------- */
+
+/*============================== FIM FILTROS =======================================*/
+
+
+/*================================= RESULTADOS ==================================*/
+    section#resultados > div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 4px solid #EEEFEF ;
+    }
+
+    section#resultados div.faculdades input[type=checkbox]{
+        display: none;
+    }
+
+    @media(min-width:720px){
+        section#filtros > div#topo-resultados h2{
+            width: auto;
+        }
+    }
+
+    section#resultados > div label{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    section#resultados div.faculdades label::before{
+        content: "";
+        height: 17px;
+        width: 17px;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius:3px;
+        margin: auto 5px auto 0;
+        margin-right: 5px;
+    }
+    
+    @media(max-width:400px){
+        section#resultados div.faculdades label::before{
+            width: 20px;
+        }
+    }
+
+    section#resultados div.faculdades input:checked + label::before{
+        background: #18ACC4 url(/imgs/checkmark.png) no-repeat ;
+        background-size: 16px ;
+        content: "" ;
+        position: relative ;
+        border: 2px solid #18ACC4 ;
+        border-radius:3px ; 
+    }
+
+    section#resultados > div label img {
+        width: 100px;
+        height: 60px;
+        margin: 0;
+    }
+
+    @media(min-width:720px){
+        div#cx-modal section#resultados > div label > img {
+            width: 140px;
+            height: 60px;
+        }
+    }
+
+    div.nao-mostrar-facul1, div.nao-mostrar-facul2,
+    div.nao-mostrar-facul3, div.nao-mostrar-facul4 {
+        display: none !important;
+    }
+
+    div.faculdades label > div{
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        width: 72%;
+    }
+
+    @media(min-width:720px){
+        div.faculdades label > div{
+            flex-direction: row;
+        }
+    }
+
+    @media(max-width:550px){
+        div.faculdades label > div{
+            width: 65%;
+        }
+    }
+
+    @media(max-width:400px){
+        div.faculdades label > div{
+            width: 45%;
+        }
+    }
+
+    div.faculdades label > div div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section#resultados span#curso{
+        color: #007A8D;
+        margin-top: 5px;
+        margin-bottom: 7px;
+        font-size: 16px;
+    }
+
+    section#resultados span#formacao {
+        margin-top: 0px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    section#resultados div span#bolsa::before{
+        content: "Bolsa de ";
+        margin: 0;
+        color: #1F2D30;
+    }
+
+    section#resultados div span#bolsa{
+        margin-top: 20px;
+        margin-bottom: 7px;
+        color: #0FA866;
+    }
+
+    @media(min-width:720px){
+        section#resultados div span#bolsa{
+            margin-top: 0px;
+            align-self: flex-end;
+        }
+        section#resultados div span#preco{
+            align-self: flex-end;
+        }
+    }
+
+    section#resultados div span#bolsa::after{
+        content: "%";
+    }
+
+    section#resultados div span#preco::before{
+        content: "R$ ";
+    }
+
+    section#resultados div span#preco{
+        display: inline-block;
+        font-weight: 700;
+        color: #0FA866;
+    }
+
+    section#resultados div span#preco::after{
+        content: "/mês ";
+    }
+
+/*============================= FIM RESULTADOS =================================*/
+
+/*================================= BOTÕES =====================================*/
+
+    div#botoes{
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    div#botoes button#cancelar{
+        -webkit-appearance: none;
+        font-weight: 700;
+        background: white;
+        border: 2px solid #007A8D;
+        height: 50px;
+        width: 110px;
+        color: #007A8D;
+        margin-right: 20px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    div#botoes button#adicionar{
+        -webkit-appearance: none;
+        background: #FDCB13;
+        border: 2px solid #DE9E1F;
+        color: #1E2C30;
+        width: 180px;
+        height: 50px;
+        font-weight: 700;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    div#botoes button#adicionar:disabled{
+        -webkit-appearance: none;
+        background: #CACDCD;
+        border: 2px solid #81898A;
+        font-weight: 700;
+        width: 180px;
+        height: 50px;
+        color:#81898A;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+/*=============================== FIM BOTÕES ====================================*/
