@@ -13,7 +13,7 @@ Se o caso o link não direcioná-lo à página, basta apenas fazer o download de
 
 ### Marcou uma faculdade como favorita, saiu da página e esqueceu qual havia marcado? 🤔
  
-Sem problemas, sua faculdade escolhida fica salva no LocalStorage, então você pode sair e voltar da página quantas vezes quiser, que sua faculdade estará lá esperando você.
+Sem problemas! Sua faculdade escolhida fica salva no LocalStorage, então você pode sair e voltar da página quantas vezes quiser que sua faculdade estará lá esperando você.
 
 ## Boas práticas ✔️
 - Mobile first.
