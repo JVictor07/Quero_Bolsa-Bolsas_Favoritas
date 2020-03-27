@@ -36,9 +36,9 @@ Além disso, acredito que o uso do HTML semântico ajudará muito na indexação
 ## O que eu mudaria? 🤔
 Uma das últimas alterações que faria neste projeto é escrevê-lo na língua inglesa, visto que essa é a língua mais falada do mundo, creio que meu projeto poderia alcançar muito mais pessoas. Porém, devido ao curto espaço de tempo, resolvi escrevê-lo na língua em que tenho maior domínio.
 
+---------------------------------------------------------------------------------------------------------------------------------------
 
-
-Este foi mais um projeto realizado por mim e, caso notou algum erro, ou queira dar algum feedback, será um prazer ouvi-lo.
+Este foi mais um projeto realizado por mim e, caso notou algum erro, ou queira dar algum feedback, será um prazer ouvi-lo !
 
 Feito com ♥️,
 
