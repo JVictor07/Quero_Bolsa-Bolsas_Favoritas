@@ -3,9 +3,11 @@ fetch('db.json')
 		return ObjetosDoJson.json()
 	})//Retorna um objeto
 	.then(function (ObjetosDoJson) {
-        
-        FazerListaDasFaculdades()
-        function FazerListaDasFaculdades() {
+
+        FazerListaDasFaculdades_NoModal(), AdicionarPosicaoDaFaculdadeNoJson()
+
+        function FazerListaDasFaculdades_NoModal() {
+            //Cria a lista de faculdades clonando as tags da faculdade padrão que está no HTML.
 
             div = document.querySelector('div.faculdades')
             input = document.querySelector('div.faculdades input')
@@ -38,8 +40,11 @@ fetch('db.json')
             document.firstElementChild.querySelector('div.faculdades').remove()//Eliminando o que foi usado como clone
         }
 
-        AdicionarPosicaoDaFaculdadeNoJson()
         function AdicionarPosicaoDaFaculdadeNoJson() {
+            //Cria uma classe, que será usada para saber a posição dos dados desta faculdade no JSON,
+            //pois as faculdades estarão organizadas por ordem alfabética, e não por localização no arquivo JSON.
+            //Assim, nos facilitando quando precisarmos fazer mundanças nesta div de acordo com sua posição no JSON.
+
             faculdades = document.querySelectorAll('div.faculdades')
             for (i = 0; i < faculdades.length; i++) {
                 faculdades[i].classList.add('PosicaoJson' + i)
