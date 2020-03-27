@@ -91,7 +91,7 @@ input, button {
     header section#topo div#logo img {
         height: 71px;
         width: 132px;
-        margin: 0;
+        margin: 0 0 5px 0;
     }
     
     header section#topo > div#login-menu{
@@ -192,7 +192,7 @@ input, button {
 
     main section#caminho-user {
         margin-top: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         font-size: 1.1em;
     }
 
