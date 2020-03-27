@@ -4,15 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Quero Educação</title>
+	<title>Bolsas Favoritas</title>
+	<link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/pagina.css">
 	<link rel="stylesheet" href="css/modal.css">
-	<link rel="stylesheet" href="css/bolsas_favoritas.css">
+	<link rel="stylesheet" href="css/estilo-bolsas.css">
 </head>
 
 <body>
-	
-	
 	
 	<header>
 		
@@ -22,7 +21,7 @@
 
 				<img src="imgs/info-blue.png" alt="">
 				<span class="invisivel-desk">Ajuda</span>
-				<span><!--Conteúdo via CSS, linha 160--></span>
+				<span><!--Conteúdo via CSS, pagina.css , linha 349--></span>
 
 			</div>
 
@@ -47,7 +46,7 @@
 
 			<div id="login-menu">
 				<span class="invisivel-desk">Conta</span>
-				<span><!--Conteúdo via CSS, linha 164--></span>
+				<span><!--Conteúdo via CSS, pagina.css , linha 349--></span>
 				<img src="imgs/user.png" alt="">
 			</div>
 
@@ -57,7 +56,7 @@
 			<ul class="container">
 				<li><a href="">Minha Conta</a></li>
 				<li><a href="">Pré-matrículas</a></li>
-				<li class="pgatual"><a href="">Bolsas favoritas</a></li>
+				<li class="selecao-atual"><a href="">Bolsas favoritas</a></li>
 			</ul>
 		</nav>
 
@@ -67,8 +66,6 @@
 				<li>
 					<select name="Menu">
 						<option selected>Menu</option>
-						<option value=""><a href="">Pré-matrículas</a></option>
-						<option value=""><a href="">Bolsas favoritas</a></option>
 					</select>
 				</li>
 			</ul>
@@ -109,9 +106,9 @@
 
 		<section id="selecao-semestre">
 			<div>
-				<button id="todos_semestres" class="pgatual">  Todos os semestres </button>
+				<button id="todos_semestres" class="selecao-atual">  Todos os semestres </button>
 				<button id="segundo-semestre"> 2º semestre de 2019</button>
-				<button id="primeiro-semestre"> 1º semestre de 2020</button> <!-- Trocar por botoes -->
+				<button id="primeiro-semestre"> 1º semestre de 2020</button>
 			</div>
 		</section>
 
@@ -137,12 +134,15 @@
 					<span class="nome-curso">
 						Arquitetura e Urbanismo
 					</span>
-					<span class="nota-universidade">
-						3.8
-					</span>
-					<span class="estrelas-facul">
-						<!-- ⭐⭐⭐⭐⭐ -->
-					</span>
+					<div class="avaliacao">
+						<span class="nota-universidade">
+							3.8
+						</span>
+						<span class="estrelas-facul">
+							<span class="cor-estrela"></span>
+							<img src="/imgs/estrelas.png" alt="">
+						</span>
+					</div>
 				</div>
 			
 				<div class="central">
@@ -171,16 +171,13 @@
 
 			</div>
 
-
 		</section>
-
-		
 
 	</main>
 
 	<footer>
 		<section id="contatos">
-			<!--Mudar esse section por div-->
+			
 			<ul>
 				<li id="cxwhats-mobile">
 					<img src="imgs/whats-white.png" alt="">
@@ -196,7 +193,6 @@
 
 					<div>
 						<h2 id="chat">Chat <span class="invisivel-mobile"> ao vivo </span></h2>
-						<!--TUDO VIRA SPAN-->
 						<p class="invisivel-mobile">Seg - Sex 8h-22h</p>
 					</div>
 
@@ -223,12 +219,12 @@
 		</section>
 
 		<section id="mensagem">
-			<p>Feito com ♡ pela Quero Educação</p>
+			<span>Feito com ♡ pela Quero Educação</p>
 		</section>
+
 	</footer>
 
 	<section id="background-modal">
-		
 
 		<div id="cx-modal">
 			<button id="botao-fechar">✕</button>
@@ -251,8 +247,8 @@
 					</select>
 				</div>
 
-				<div id="tipo-curso"> <!--Troquei esse id, era "escolhas"-->
-					<label for="modalidade">Como você quer estudar?</label><!--trocar esse label por span-->
+				<div id="tipo-curso">
+					<label for="modalidade">Como você quer estudar?</label>
 
 					<div>
 						<div id="cx-presencial">
@@ -274,7 +270,7 @@
 					<input type="range" id="range-pd-pagar" min="200" max="1500" step="100" value="1500">
 				</div>
 
-				<div id="topo-resultados"> <!--Trocar id por secao-lista-faculdades-->
+				<div id="topo-resultados">
 					<h2>Resultado:</h2>
 					<div>
 						<span>Ordenar por</span>
@@ -291,17 +287,21 @@
 				<div class="faculdades">
 					<input type="checkbox" name="checkbox-facul" id="checkbox-facul" class="checkbox-facul">
 					<label for="checkbox-facul">
-						
-						<img src="" alt="">
+
+						<img src="" alt="logo da faculdade">
+
 						<div>
+							
 							<div>
 								<span id="curso">Administração</span>
 								<span id="formacao">Bacharelado</span>
 							</div>
+
 							<div>
 								<span id="bolsa">Bolsa de 50%</span>
 								<span id="preco">R$374/mês</span>
 							</div>
+
 						</div>
 					</label>
 				</div> 
@@ -310,20 +310,19 @@
 
 			<div id="botoes">
 				<button id="cancelar">Cancelar</button>
-				<button id="adicionar" disabled type="reset">Adicionar bolsa(s)</button>
+				<button id="adicionar_facul_favorita" disabled type="reset">Adicionar bolsa(s)</button>
 			</div>
 
-		</div>
-		<!--Fim cx-modal-->
-	</section>
+		</div><!--Fim cx-modal-->
+		
+	</section> <!--Fim do background do modal-->
 	
-	<!--Fim do background do modal-->
-	<script src="scripts/animacao-modal.js"></script>
+	<script src="scripts/animacoes_no_modal.js"></script>
 	<script src="scripts/fazer-lista-facul.js" ></script>
 	<script src="scripts/filtros.js" ></script>
 	<script src="scripts/gerar-opcoes-filtro.js"></script>
-	<script src="scripts/faculs.js"></script>
-	<!--COlocar o window.onload e botar ele la pra cima-->
+	<script src="scripts/faculs_selecionadas.js"></script>
+	
 </body>
 
 </html>
