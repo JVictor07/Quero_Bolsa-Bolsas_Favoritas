@@ -6,11 +6,11 @@ Pensando em trazer uma melhor usabilidade para você, deixei este projeto hosped
 **Obs:** Você pode abri-lo de qualquer dispositivo que desejar, seja ele tablet , celular, computador, notebook e etc... Ele é totalmente responsivo e garanto que não deixará nenhum usuário na mão. Assim como a Quero Bolsa jamais deixou um universitário = )
 
 
-## Caso o link não funcione.
+### Caso o link não funcione.
  
 Se o caso o link não direcioná-lo à página, basta apenas fazer o download de todos os arquivos, adicioná-los a uma página e clicar no arquivo index.html = ).
 
-## Marcou uma faculdade como favorita, saiu da página e esqueceu qual havia marcado?
+### Marcou uma faculdade como favorita, saiu da página e esqueceu qual havia marcado?
  
 Sem problemas, sua faculdade escolhida fica salva no LocalStorage, então você pode sair e voltar da página quantas vezes quiser, que sua faculdade estará lá esperando você.
 
