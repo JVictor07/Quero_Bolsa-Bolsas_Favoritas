@@ -1,0 +1,385 @@
+/*----------------------------- GLOBAIS ----------------------------------*/
+    
+    main section#bolsas{
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 1.9vw;
+        grid-row-gap: 30px;
+    }
+
+/*-------------------------- FIM GLOBAIS ---------------------------------*/
+
+/*========================= CAIXA ADICIONAR BOLSA ======================= */
+
+    main section#bolsas div#cx_add_bolsa{
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.20);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        width: 100%;
+        height: 265px;
+        cursor: pointer;
+    }
+
+    main section#bolsas div#cx_add_bolsa div h2{
+        margin: 5px 0;
+    }
+
+    main section#bolsas div#cx_add_bolsa img{
+        margin-bottom: 20px;
+        width: 80px;
+        height: 80px;
+    }
+
+    
+/*======================== FIM CAIXA ADICIONAR BOLSA ==================== */
+
+
+/*======================== CAIXA BOLSA ADICIONADA ======================*/
+
+    /*-------------------------- GLOBAIS E REPETIÇÕES ----------------------*/
+    div.cx_bolsa_adicionada{
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.20);
+        background: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 25px;
+    }
+
+    div.cx_bolsa_adicionada span{
+        font-weight: 700;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    div.cx_bolsa_adicionada span.nome-universidade,
+    div.cx_bolsa_adicionada span.nome-curso,
+    div.cx_bolsa_adicionada span.preco-bruto{
+        display:block;
+    }
+
+    span.tipo-curso,
+    span.periodo,
+    span.nome-universidade{
+        text-transform: uppercase;
+    }
+
+    div.cx_bolsa_adicionada span.inicio-aulas,
+    div.cx_bolsa_adicionada span.data-inicio,
+    div.cx_bolsa_adicionada span.preco-bruto,
+    div.cx_bolsa_adicionada span.preco-cdesconto::after{
+        font-weight: normal;
+    }
+
+    span.nome-curso,
+    span.nota-universidade{
+        font-size: 20px;
+    }
+
+    span.nome-universidade,
+    div.central div,
+    span.situacao-bolsa{
+        margin-bottom: 20px;
+    }
+
+    div.superior img,
+    span.nome-curso{
+        margin-bottom: 25px;
+    }
+
+    span.preco-cdesconto,
+    span.preco-bruto.facul-indisponivel{
+        margin-bottom: 40px;
+    }
+    
+    /*--------------------- FIM GLOBAIS E REPETIÇÕES ----------------------*/
+
+    /*---------------------- PARTE SUPERIOR DA CAIXA ----------------------*/
+
+    main div.cx_bolsa_adicionada div.superior{
+        width: 100% ; 
+        padding-bottom: 25px; 
+    }
+
+    main div.cx_bolsa_adicionada div.superior img{
+        height: 85px;
+        width: 90%;
+    }
+    
+    main div.cx_bolsa_adicionada div.superior span.nome-curso{
+        color: #007A8D;
+    }
+
+    main div.cx_bolsa_adicionada div.superior div.avaliacao{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main div.cx_bolsa_adicionada div.superior span.estrelas-facul{
+        margin-left: 7px;
+        padding: auto;
+    }
+
+    main div.cx_bolsa_adicionada > div.superior span.estrelas-facul > img{
+        height: 18px;
+        width: auto;
+        margin: auto !important;
+        position: relative;
+    }
+
+    main div.cx_bolsa_adicionada div.superior span.estrelas-facul span.cor-estrela{
+        position: absolute;
+        margin: 0;
+        background: #FDCB13;
+        height: 18px;
+        /* width:107.5px; *//*Cada estrela equivale a 21.5px*/
+    }
+
+    /*---------------------- FIM PARTE SUPERIOR DA CAIXA ---------------*/
+
+    /*------------------------- PARTE CENTRAL DA CAIXA -----------------*/
+
+    main div.cx_bolsa_adicionada div.central{
+        border-top: 4px solid #EDEFEF;
+        border-bottom: 4px solid #EDEFEF;
+        padding: 25px 0;
+        width: 100%;
+    }
+
+    main div.cx_bolsa_adicionada div.central div{
+        display: flex;
+        justify-content: center;
+    }
+
+    main div.cx_bolsa_adicionada div.central span.periodo::before{
+        content: "•";
+        margin: 0 5px;
+    }
+
+    /*----------------------- FIM PARTE CENTRAL DA CAIXA -----------------*/
+
+    /*------------------------- PARTE INFERIOR DA CAIXA ------------------*/
+
+    main div.cx_bolsa_adicionada div.inferior span.situacao-bolsa{
+        margin-top: 30px;
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-bruto{
+        font-size: 16px;
+        text-decoration: line-through;
+        margin-bottom: 12px; 
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto::before,
+    main div.cx_bolsa_adicionada div.inferior span.preco-bruto::before {
+        content: "R$ ";
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-bruto.facul-indisponivel{
+        text-decoration: none;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    main div.inferior span.preco-bruto.facul-indisponivel::before,
+    main div.inferior span.preco-cdesconto.facul-indisponivel{
+        display: none;
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto{
+        font-size: 26px;
+        color: #0FA866 ;
+    }
+
+    main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto::after{
+        content: "/mês";
+        font-size: 16px;
+        margin-left: 5px;
+        color: #1F2D30;
+    }
+
+    /*----------------------- FIM PARTE INFERIOR DA CAIXA ----------------*/
+
+/*----------------------------- BOTÕES DA CAIXA ----------------------*/
+    main div.cx_bolsa_adicionada div.botoes{
+        display: flex;
+        justify-content: space-between;            
+        width: 100%;
+    }
+
+    main div.cx_bolsa_adicionada button{
+        display: flex;
+        justify-content: center;
+        height: 55px;
+        font-weight: 700;
+        border-radius: 5px;
+        font-size: 18px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    main div.cx_bolsa_adicionada button.botao-excluir{
+        flex: 1 !important;
+        text-align: center;
+        background: white;
+        border: 2px solid #007A8D;
+        color: #007A8D;
+        margin-right: 20px;
+    }
+
+    main div.cx_bolsa_adicionada button.ver-oferta{
+        flex: 1.5 !important;
+        align-items: center;
+        background: #FDCB13;
+        border: 2px solid #DE9E1F;
+        color: #1E2C30;
+    }
+
+    main div.cx_bolsa_adicionada button.ver-oferta:disabled{
+        background: #CACDCD;
+        border: 2px solid #81898A;
+        color:#81898A;
+        cursor: auto;
+    }
+
+    /*--------------------------- FIM BOTÕES DA CAIXA ---------------------*/
+
+/*============================== MEDIAS QUERY ===========================*/
+
+    /* =============== GRID DE ORGANIZAÇÃO DAS BOLSAS ================== */
+
+    @media(min-width:620px){
+        main section#bolsas{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media(min-width:1000px){
+        main section#bolsas{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media(min-width:1300px){
+        main section#bolsas{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    /* =============== FIM DO GRID DE ORGANIZAÇÃO DAS BOLSAS ========= */
+
+    /*============== CAIXAS E BOTÕES =========== */
+
+    @media(min-width:620px){
+
+        main section#bolsas > div#cx_add_bolsa{
+            height: 420px;
+        }
+
+        main section#bolsas div#cx_add_bolsa img{
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        main div.cx_bolsa_adicionada button{
+            height: 40px;
+            font-size: 16px;
+        }
+
+    }
+
+    /*============= FIM CAIXAS E BOTÕES ======== */
+
+    /*============= TEXTOS E IMAGENS =========== */
+
+    @media(min-width: 620px){
+        /*--------------- GLOBAIS E REPETIÇÕES --------------*/
+
+        div.superior img,
+        span.nome-curso,
+        span.nome-universidade,
+        div.central div{
+            margin-bottom: 10px !important;
+        }
+
+        span.situacao-bolsa,
+        span.preco-bruto,
+        span.preco-bruto.facul-indisponivel,
+        span.nome-universidade{
+            font-size: 12px !important;
+        }
+
+        span.preco-bruto,
+        span.inicio-aulas,
+        span.data-inicio{
+            font-weight: 550 !important;
+        }
+
+        span.tipo-curso,
+        span.periodo,
+        span.inicio-aulas,
+        span.data-inicio {
+            font-size: 14px !important;
+        }
+
+        span.nome-curso,
+        span.nota-universidade{
+            font-size: 15px !important;
+        }
+
+        /*------------ FIM GLOBAIS E REPETIÇÕES -------------*/
+        
+        div.cx_bolsa_adicionada{
+            padding: 17px 25px !important;
+        }
+
+        main div.cx_bolsa_adicionada div.superior{
+            padding-bottom: 15px; 
+        }
+
+        main div.cx_bolsa_adicionada div.superior img{
+            height: 35px;
+            width: 140px;
+        }
+
+        main div.cx_bolsa_adicionada div.central{
+            padding: 15px 0;
+        }
+
+        main div.cx_bolsa_adicionada div.inferior span.situacao-bolsa{
+            margin: 20px 0 15px 0;
+        }
+
+        main div.cx_bolsa_adicionada div.inferior span.preco-bruto{
+            margin-bottom: 9px;
+        }
+
+        main div.cx_bolsa_adicionada div.inferior span.preco-bruto.facul-indisponivel{
+            text-align: center;
+            line-height: 20px;
+            margin: 0 5px 25px 5px;
+        }
+
+        main div.cx_bolsa_adicionada div.inferior span.preco-cdesconto{
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+    }/* - FIM MEDIA QUERY - */
+
+    /*============= FIM TEXTOS E IMAGENS =========== */
+
+
+
+
+
+
+    
