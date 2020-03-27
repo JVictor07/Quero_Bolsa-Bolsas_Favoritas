@@ -222,7 +222,6 @@
         border-radius: 5px;
         font-size: 18px;
         outline: none;
-        cursor: pointer;
     }
 
     main div.cx_bolsa_adicionada button.botao-excluir{
@@ -376,10 +375,3 @@
     }/* - FIM MEDIA QUERY - */
 
     /*============= FIM TEXTOS E IMAGENS =========== */
-
-
-
-
-
-
-    
