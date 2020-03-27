@@ -1,4 +1,4 @@
-/*---GLOBAL---*/
+/*=========================== GLOBAIS =======================*/
 * {
     box-sizing: border-box;
     color: #1F2D30;
@@ -14,377 +14,463 @@ body, html {
     margin: 0 5%;
 }
 
-.pgatual{
+.selecao-atual{
     background:#007A8D !important;
     color: white !important;
 }
-li.pgatual{
-    background:#007A8D !important;
-}
-/*---FIM GLOBAL---*/
 
-/*---HEADER---*/
-header{
-    background: white;
+input, button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-header section#topo {
-    display: flex;
-}
+/*========================= FIM GLOBAIS =======================*/
 
-header section#topo *{
-    color: #007A8D;
-}
+/*========================== HEADER ===========================*/
 
-header section#topo > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
+    /*--------------------------- GLOBAIS E REPETIÇÕES-----------------------*/
+    
+    header{
+        background: white;
+    }
 
-header section#topo div span{
-    font-weight: 700;
-    font-size: 14pt;
-}
+    header section#topo *{
+        color: #007A8D;
+    }
 
-header section#topo > div img{
-    width: 35px;
-    height: 35px;
-    padding: 0;
-}
+    header section#topo > div img,
+    header section#topo > div#info-menu,
+    header section#topo div#logo img,
+    header section#topo > div#login-menu{
+        padding: 0;
+    }
 
-header section#topo > div#info-menu{
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    flex: 0;
-}
-
-header section#topo hr{
-    margin: auto;
-    border: none;
-    background: #EDEFEF;
-    width: 4px;
-    height: 50px;
-}
-
-header section#topo div#whats{
-    display: none;
-}
-
-header section#topo div#logo img {
-    height: auto;
-    width: auto;
-    margin: 0;
-    padding: 0;
-}
-
-header section#topo div#logo h1 {
-    display: none;
-}
-
-header section#topo > div#login-menu{
-    flex-direction: column-reverse;
-    align-items: center;
-    padding: 0;
-    text-align: center;
-}
-
-@media(min-width:1050px){
-    header section#topo div#whats{
+    header section#topo,
+    header section#topo > div{
         display: flex;
-        flex: 1.2;
+    }
+
+    header section#topo > div,
+    header section#topo > div#info-menu,
+    header section#topo > div#login-menu{
+        align-items: center;
         justify-content: center;
     }
 
-    header section#topo > div#whats > div{
-        display: block;
-    }
-    header section#topo div#whats div span{
-        display: block;
-        margin: 0;
-    }
-
-    header section#topo div#whats div span.complemento{
-        font-size: 11pt;
-        display: block;
-        font-weight: normal;
-        margin: 0;
-    }
-    
-    header section#topo > div#logo{
-        justify-content: left;
-    }
-
-}
-
-@media (min-width:800px){
-
-    header section#topo > div{
-        justify-content: auto;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    header section#topo div img {
-        margin-right: 15px;
-    }
-
-    header section#topo > div#info-menu{
-        justify-content: left;
-        padding: 0;
-        flex: 1;
-    }
-
-    header section#topo div#logo{
-        flex: 1.8;
-    }
-    
-    header section#topo div#logo + hr{
+    header section#topo div#whats,
+    header section#topo div#logo h1{
         display: none;
+    }
+
+    /*-------------------------- FIM GLOBAIS E REPETIÇÕES -----------------------*/
+
+    header section#topo > div {
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    header section#topo > div img{
+        width: 32px;
+        height: 32px;
+    }
+
+    header section#topo div span{
+        font-weight: 700;
+        font-size: 13.5pt;
+    }
+
+    header section#topo hr { /* Traços de separação de conteúdos no header */
+        margin: auto;
+        border: none;
+        background: #EDEFEF;
+        width: 4px;
+        height: 47px;
+    }
+
+    header section#topo div#logo img {
+        height: 71px;
+        width: 132px;
+        margin: 0;
     }
     
     header section#topo > div#login-menu{
-        flex-direction: row;
-        padding: 0;
+        flex-direction: column-reverse;
         text-align: center;
     }
 
-    header section#topo div#login-menu img{
-        margin-left: 15px;
-    }
-    
-    /*--- Alteração de texto --*/
-    
-    header section#topo .invisivel-desk{
-        display: none;
-    }
-    header section#topo div#info-menu span:after{
-        display: block;
-        content: "Como funciona";
-    }
-    header section#topo div#login-menu span:after{
-        display: block;
-        content: "Nome Sobrenome";
-    }
+/* =========================== FIM HEADER ========================= */
+/*============================ NAVEGAÇÃO ===========================*/
 
-    /*--- Fim da Alteração de texto --*/
-    
-}/*FIM MEDIA QUERY*/
-
-/*----------------NAVEGAÇÃO-------------------------*/
-nav.visivel-desk{
-    display: none;
-}
-
-nav.invisivel-desk{
-    display: flex;
-}
-
-header nav {
-    background: #18ACC4;
-}
-
-header nav ul{
-    display: flex;
-    padding: 0px;
-}
-
-header nav ul li{
-    display: flex;
-    padding: 12px 15px;
-    cursor: pointer;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-}
-
-header nav.invisivel-desk ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-header nav ul li:hover {
-    background:#007A8D;
-}
-
-header nav.invisivel-desk li + li{
-    padding: 0;
-    justify-content: right;
-    background: url("../imgs/seta-pbaixo-branca.png") no-repeat right;
-}
-
-header nav.invisivel-desk select{
-    -webkit-appearance: none;
-    display: block;
-    background: transparent;
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    width: auto;
-    padding: 0;
-    border: 0;
-}
-
-header nav.invisivel-desk select option{
-    background: #18ACC4;
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    border: 0;
-
-    height: 100px;
-    border: 1px solid #cbcbcb;
-    padding-left: 17px;
-    padding-top: 12px;
-}
-
-@media(min-width:800px){
-    
-    nav.invisivel-desk{
-        display: none;
+    /* ------------------------ NAVEGAÇÃO DESKTOP ------------------ */
+    nav.invisivel-desk,
+    header nav ul,
+    header nav ul li{
+        display: flex;
     }
 
     nav.visivel-desk{
-        display:flex;
-    }
-
-    header nav ul li:first-child{
-        padding: 12px 30px 12px 0!important;
-    }
-    
-}
-
-/*---FIM HEADER---*/
-
-
-/*---           MAIN          ----*/
-
-
-/*caminho do usuario*/
-main section#caminho-user {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    font-size: 1.1em;
-}
-
-main section#caminho-user ul {
-    padding: 0;
-    margin: 0;
-}
-
-main section#caminho-user ul li{
-    display: inline;
-    list-style: none;
-}
-
-main section#caminho-user a span{
-    text-decoration: none;
-    font-weight: 700;
-    color: #007A8D;
-}
-
-main section#caminho-user a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #007A8D;
-}
-
-main section#caminho-user ul li:last-child a span{
-    font-weight: normal;
-    color: black;
-}
-
-@media(max-width:900px){
-    main section#caminho-user ul li:first-of-type a{
-        display: flex;
-    }
-    main section#caminho-user ul li:first-of-type a:before{
-        width: 25px;
-        content: url("../imgs/flecha-esquerda.png");
-    }
-    main section#caminho-user ul li:first-of-type a:after{
-        content: "Minha conta";
-    }
-    a span{
         display: none;
     }
-    .visivel-mobile{
-        display: inline;
-    }
-}
-/*fim do caminho do usuario*/
 
-/*Nome da pg*/
-main section#nomedapg h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-main section#nomedapg p{
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-/*Fim do nome da pg*/
-
-/*Seleção de semestre*/
-    section#selecao-semestre{
-        display: flex;
-        justify-content: flex-end;
-        padding: 0;
-    }
-    section#selecao-semestre div{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        flex-wrap: wrap;
+    header nav {
+        background: #18ACC4;
     }
 
-    section#selecao-semestre button{
+    header nav ul{
+        padding: 0px;
+    }
+
+    header nav ul li{
+        padding: 12px 15px;
         cursor: pointer;
-        height: 36px;
-        width: 190px;
-        border: 2px solid #007A8D;
-        font-size: 16px;
+    }
+
+    header nav ul li:hover {
+        background:#007A8D;
+    }
+
+    header nav ul li a {
         text-decoration: none;
         font-weight: 700;
-        color: #007A8D;
-        background: white;
+        color: white;
+    }
+    /* ---------------------- FIM NAVEGAÇÃO DESKTOP ------------------ */
+
+    /* ------------------------- NAVEGAÇÃO MOBILE ------------------ */
+
+    header nav.invisivel-desk ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header nav.invisivel-desk li{
+        justify-content: left;
+        padding-left: 0;
+    }
+
+    header nav.invisivel-desk li + li {
+        width: 80px;
+        padding: 0;
+        background: url("../imgs/seta-pbaixo-branca.png") no-repeat right;
+    }
+
+    header nav.invisivel-desk select,
+    header nav.invisivel-desk select option{
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
         outline: none;
     }
 
-    section#selecao-semestre div button{
+    header nav.invisivel-desk select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: auto;
+        background: transparent;
+        cursor: pointer;
+        border: 0;
+    }
+
+    header nav.invisivel-desk select option{
+        width: 900px;
+        background: #18ACC4;
+    }
+
+    /* ---------------------- FIM NAVEGAÇÃO MOBILE -------------------- */
+
+/*========================== FIM NAVEGAÇÃO ===========================*/
+
+/*============================= FIM HEADER =========================*/
+
+
+/*=============================== MAIN =============================*/
+
+    /*-------------------------CAMINHO DO USUÁRIO-----------------------*/
+
+    main section#caminho-user {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-size: 1.1em;
+    }
+
+    main section#caminho-user ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    main section#caminho-user ul li{
+        display: inline;
+        list-style: none;
+    }
+
+    main section#caminho-user a,
+    main section#caminho-user a span {
         text-decoration: none;
+        font-weight: 700;
+        color: #007A8D;
     }
 
-    section#selecao-semestre div button:first-of-type{
-        border-radius: 6px 0 0 6px;
+    main section#caminho-user ul li:last-child a span{
+        font-weight: normal;
+        color: black;
     }
 
-    section#selecao-semestre div button:last-of-type{
-        border-radius: 0 6px 6px 0;
+    /*-----------------------FIM CAMINHO DO USUÁRIO-----------------------*/
+
+    /*--------------------------- NOME DA PÁGINA -------------------------*/
+
+    main section#nomedapg h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        margin-top: 0;
     }
 
-    section#selecao-semestre button:hover {
-        color: white;
-        background: #007A8D;
+    main section#nomedapg p{
+        font-size: 1.2em;
+        margin-bottom: 40px;
     }
-    @media (max-width:650px) {
+
+    /*-------------------------- FIM NOME DA PÁGINA -----------------------*/
+
+    /*--------------------------- SELEÇÃO SEMESTRE ------------------------*/
+        
+        section#selecao-semestre{
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        section#selecao-semestre div{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
 
         section#selecao-semestre button{
-            width: 100%;
+            cursor: pointer;
+            height: 36px;
+            width: 190px;
+            border: 2px solid #007A8D;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #007A8D;
+            background: white;
+            outline: none;
         }
+
+        section#selecao-semestre button:hover {
+            color: white;
+            background: #007A8D;
+        }
+
+        section#selecao-semestre div button:first-of-type{
+            border-radius: 6px 0 0 6px;
+        }
+
+        section#selecao-semestre div button:last-of-type{
+            border-radius: 0 6px 6px 0;
+        }
+
+    /*--------------------------- FIM SELEÇÃO SEMESTRE --------------------*/
+
+/*=============================== FIM MAIN ============================*/
+
+/*=============================== FOOTER ==============================*/
+    
+    footer section#contatos,
+    footer section#contatos ul,
+    footer section#contatos li,
+    footer section#mensagem {
+        display: flex;
+    }
+
+    footer{
+        margin-top:20%
+    }
+
+    footer *{
+        color: white;
+    }
+
+    footer section#contatos {
+        background: #007A8D;
+    }
+
+    footer section#contatos ul{
+        margin: 0 5%;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer section#contatos li{
+        flex: 1;
+        list-style: none;
+        align-items: center;
+        padding: 35px;
+        cursor: pointer;
+    }
+
+    footer section#contatos li img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        text-align: center;
+    }
+
+    footer section#contatos li div h2 {
+        font-style: normal;
+        margin:0;
+        font-size: 21px;
+        display: inline-block;
+    }
+
+    footer section#contatos li div p {
+        margin:0;
+    }
+
+    footer section#mensagem{
+        height: 120px;
+        background:#18ACC4;
+    }
+
+    footer section#mensagem span{
+        margin: auto;
+        font-weight: 700;
+        text-align: center;
+    }
+
+/*============================= FIM FOOTER ============================*/
+
+/*============================= MEDIAS QUERY ==========================*/
+
+    /* ------------ MIN WIDTH ---------- */
+
+    @media (min-width:800px){
+
+        header section#topo .invisivel-desk,
+        header section#topo div#logo + hr{ /* ELIMINA O SEGUNDO TRAÇO AO LADO DIREITO DA LOGO */
+            display: none;
+        }
+
+        header section#topo > div{
+            justify-content: auto;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        header section#topo div img {
+            margin-right: 15px;
+        }
+
+        header section#topo > div#info-menu {
+            justify-content: left;
+            padding: 0;
+            flex: 1;
+        }
+
+        header section#topo div#logo{
+            flex: 1.8;
+        }
+
+        header section#topo > div#login-menu{
+            flex-direction: row;
+        }
+
+        header section#topo div#login-menu img{
+            margin-left: 15px;
+        }
+        
+        /* ----------------- ADIÇÕES DE TEXTO ---------------- */
+        
+            header section#topo div#info-menu span:after {
+                display: block;
+                content: "Como funciona";
+            }
+
+            header section#topo div#login-menu span:after{
+                display: block;
+                content: "Nome Sobrenome";
+            }
+
+        /* ------------- FIM DA ADIÇÃO DE TEXTO -------------- */
+    
+    }
+
+    @media(min-width:1050px){
+
+        header section#topo div#whats{ /* FAZ APARECER AS INFORMAÇÕES DO WHATSAPP */
+            display: flex;
+            flex: 1.2;
+            justify-content: center;
+        }
+
+        header section#topo div#whats div span,
+        header section#topo div#whats div span.complemento{
+            display: block;
+            margin: 0;
+        }
+
+        header section#topo div#whats div span.complemento{
+            font-size: 11pt;
+            font-weight: normal;
+        }
+
+        header section#topo > div#logo{
+            justify-content: left;
+        }
+
+    }
+
+    @media(min-width:1000px){
+        
+        nav.invisivel-desk{
+            display: none;
+        }
+
+        nav.visivel-desk{
+            display:flex;
+        }
+
+        header nav ul li:first-child{
+            padding: 12px 30px 12px 0!important;
+        }
+        
+    }
+    
+    /* ---------- FIM MIN WIDTH -------- */
+
+    /* ------------ MAX WIDHT --------- */
+
+    @media(max-width:900px){
+
+        main section#caminho-user ul li:first-of-type a{
+            display: flex;
+        }
+        main section#caminho-user ul li:first-of-type a:before{
+            width: 25px;
+            content: url("../imgs/flecha-esquerda.png");
+        }
+        main section#caminho-user ul li:first-of-type a:after{
+            content: "Minha conta";
+        }
+        a span{
+            display: none;
+        }
+        .visivel-mobile{
+            display: inline;
+        }
+
+    }
+
+    @media (max-width:650px) {
+
         section#selecao-semestre button{
             display: block;
             width: 100%;
@@ -392,129 +478,69 @@ main section#nomedapg p{
             padding: 20px;
             font-size: 18.5px;
         }
+
         section#selecao-semestre div button:first-of-type{
             border-radius: 8px 8px 0 0;
         }
+
         section#selecao-semestre div button:last-of-type{
             border-radius: 0 0 8px 8px
         }
-    }/*FIM MEDIA QUERY*/
 
-/*FIM Seleção de semestre*/
+    }
 
-/*---FOOTER---*/
+    @media (max-width:1150px) {
+        
+        footer .invisivel-mobile {
+            display: none;
+        }
 
-/*UNIVERSAIS*/
+        footer section#contatos ul{
+            flex-wrap: wrap;
+            margin: 0;
+            text-align: center;
+        }
+        
+        footer section#contatos ul li{
+            display: block;
+            text-align: center;
+            padding: 20px;
+        }
 
-footer *{
-    color: white;
-}
-footer{
-    /* margin-top:225px; */
-    margin-top:20%
-}
-footer section#contatos {
-    display: flex;
-    background: #007A8D;
-}
+        footer section#contatos ul li img {
+            margin-right: 0px;
+        }
 
-footer section#contatos ul{
-    margin: 0 5%;
-    width: 100%;
-    display: flex;
-    padding: 0;
-}
+        footer section#contatos ul li#cxwhats-mobile{
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            flex: auto;
+            width: 100%;
+            border-bottom: 3px solid #18ACC4;
+        }
 
-footer section#contatos li{
-    flex: 1;
-    display: flex;
-    list-style: none;
-    align-items: center;
-    padding: 35px;
-    cursor: pointer;
-}
+        footer section#contatos ul li#cxwhats-mobile img{
+            margin-right: 15px;
+        }
 
-footer section#contatos li img {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    text-align: center;
-}
+        footer section#contatos ul li#cx-email {
+            border-left: 3px solid #18ACC4;
+            border-right: 3px solid #18ACC4;
+        }
 
-footer section#contatos li div h2 {
-    font-style: normal;
-    margin: 0;
-    font-size: 21px;
-    display: inline-block;
-}
+        footer h2:first-letter{
+            text-transform: uppercase;
+        }
 
-footer section#contatos p {
-    margin:0;
-}
+        /* ---------------- ADIÇÃO DE TEXTO ---------------- */
 
-@media (max-width:1150px) {
-    
-    footer section#contatos ul{
-        flex-wrap: wrap;
-        margin: 0;
-        text-align: center;
+            footer h2#numero + p::after{
+                content: "Segunda a sexta de 8h às 22h";
+            }
+
+        /* --------------- FIM ADIÇÃO DE TEXTO ------------- */
+
     }
     
-    footer section#contatos ul li{
-        display: block;
-        text-align: center;
-        padding: 20px;
-    }
-
-    footer section#contatos ul li#cxwhats-mobile{
-        display: flex;
-        justify-content: center;
-        text-align: left;
-
-        flex: auto;
-        width: 100%;
-        border-bottom: 3px solid #18ACC4;
-    }
-    footer section#contatos ul li#cxwhats-mobile img{
-        margin-right: 15px;
-    }
-
-    footer li#cx-email {
-        border-left: 3px solid #18ACC4;
-        border-right: 3px solid #18ACC4;
-    }
-
-    footer section#contatos ul li img {
-        margin-right: 0px;
-    }
-
-    footer .invisivel-mobile {
-        display: none;
-    }
-
-    footer .invisivel-mobile {
-        display:none
-    }
-    footer h2#numero + p::after{
-        content: "Segunda a sexta de 8h às 22h";
-    }
-    footer h2:first-letter{
-        text-transform: uppercase;
-    }
-}/*FIM MEDIA QUERY*/
-
-footer section#mensagem{
-    display: flex;
-    height: 120px;
-    background:  #18ACC4;
-}
-
-footer section#mensagem p{
-    margin: auto;
-    font-weight: 700;
-    text-align: center;
-}
-
-
-/*---FOOTER FINISH---*/
+    /* --------- FIM MAX WIDHT -------- */
