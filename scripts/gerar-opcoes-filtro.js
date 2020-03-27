@@ -4,12 +4,14 @@ fetch('db.json')
 	})//Retorna um objeto
 	.then(function (ObjetosDoJson) {
         
-        GerarOpcoesCidade()
-        GerarOpcoesCursos()
+    //Ambas funções geram opções dentro do select no modal
+
+        GerarOpcoesCidade(), GerarOpcoesCursos()
 
         function GerarOpcoesCidade() {
-            var li_tdscidades
-            var li_cidadefiltrada
+            let li_tdscidades
+            let li_cidadefiltrada
+            
             FazerListaCidades(), FiltrarRepeticoes(), CriarOpcaoCidade()
 
             function FazerListaCidades() {
@@ -20,7 +22,7 @@ fetch('db.json')
             }
 
             function FiltrarRepeticoes() {
-                let novoArray = [...new Set(li_tdscidades)];
+                const novoArray = [...new Set(li_tdscidades)];
                 li_cidadefiltrada = novoArray;
             }
 
@@ -35,8 +37,8 @@ fetch('db.json')
         }
 
         function GerarOpcoesCursos() {
-            var li_tdscursos
-            var li_cursosfiltrados
+            let li_tdscursos
+            let li_cursosfiltrados
             FazerListaCursos(), FiltrarRepeticoes(), CriarOpcaoCurso()
 
             function FazerListaCursos() {
@@ -47,11 +49,12 @@ fetch('db.json')
             }
 
             function FiltrarRepeticoes() {
-                let novoArray = [...new Set(li_tdscursos)];
+                const novoArray = [...new Set(li_tdscursos)];
                 li_cursosfiltrados = novoArray;
             }
 
             function CriarOpcaoCurso() {
+
                 for (i = 0; i < li_cursosfiltrados.length; i++) {
                     opcoes_cursos = document.createElement("option")
 
@@ -62,4 +65,5 @@ fetch('db.json')
                 }
             }
         }
+
     })
