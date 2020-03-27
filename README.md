@@ -40,6 +40,4 @@ Uma das últimas alterações que faria neste projeto é escrevê-lo na língua 
 
 Este foi mais um projeto realizado por mim e, caso notou algum erro, ou queira dar algum feedback, será um prazer ouvi-lo !
 
-Feito com ♥️,
-
-João Silva
+                                                       Feito com ♥️, João Silva
