@@ -1,6 +1,7 @@
 /* ====================BACKGROUND====================== */
+    
     section#background-modal{
-        background: rgb(31, 45, 48, 0.88);
+        background: rgba(31, 45, 48, 0.88);
         position: fixed;
         top: 0;
         right: 0;
@@ -17,11 +18,13 @@
 
     @keyframes modal {
         from {
+            filter: alpha(opacity=0);
             opacity: 0;
             transform: translate3d(0, -120px, 0);
         }
         to {
             opacity: 1;
+            filter: alpha(opacity=1);
             transform: translate3d(0, 0, 0);
         }
     }
@@ -29,14 +32,11 @@
     section#background-modal.mostrar{
         animation: modal 1s;
     }
-    @media (min-width:550px){
-        section#background-modal{
-            height: 100vh;
-        }
-    }
+    
 /*===================FIM DO BACKGROUND=================*/
 
-/*==================== BUTTON FECHAR =====================*/
+/*==================== BOTÃO FECHAR =====================*/
+    
     div#cx-modal button#botao-fechar{
         background: none;
         border: none;
@@ -46,14 +46,15 @@
         display: inline;
         cursor: pointer;
         outline: none;
-
         font-size: 28px;
         font-weight: bold;
         color:white;
     }
-/*=================== FIM BUTTON FECHAR ======================*/
 
-/*====================COMEÇO CAIXA MODAL====================*/
+/*=================== FIM BOTÃO FECHAR ======================*/
+
+/*===================== CAIXA MODAL=========================*/
+    
     section#background-modal > div#cx-modal{
         position: absolute;
         padding: 3%;
@@ -64,25 +65,19 @@
         margin-bottom: 20%;
     }
 
-    @media (min-width:750px){
-        section#background-modal > div#cx-modal{
-            width: 750px;
-            top:25%;
-        }
-    }
-/*=================== FIM CAIXA MODAL ===================*/
-/*=================== SECTION FILTROS ===================*/
+/* ================== FIM CAIXA MODAL ================== */
 
-/*- -------------------- GLOBAIS ------------------------ */
+/* ================== SECTION FILTROS ================== */
+
+/* --------------------- GLOBAIS ----------------------- */
+
     section#filtros > div{
-        display: flex;
         flex-direction: column;
-        width: 49%;
+        width: 100%;
     }
 
     div#cx-modal > h2{
         margin: 0;
-        margin-top: 0;
     }
 
     div#cx-modal > h3{
@@ -91,6 +86,22 @@
         font-weight: normal;
     }
 
+/*------------------------FIM GLOBAIS------------------------------ */
+
+/*======================================= FILTROS ========================================*/
+    /* --------------------------------- GLOBAIS E REPETIÇÕES --------------------------- */
+    section#background-modal > div#cx-modal > section#filtros,
+    div#cx-modal section#filtros > div#tipo-curso > div,
+    section#filtros > div#topo-resultados div,
+    section#filtros div#tipo-curso div label,
+    section#filtros > div#topo-resultados,
+    section#filtros > div
+    {
+        display: flex;
+    }
+
+    /* ------------------------------- FIM GLOBAIS E REPETIÇÕES ------------------------- */
+    
     div#cx-modal > section#filtros > div > label{
         text-transform: uppercase;
         font-weight: 700;
@@ -101,52 +112,37 @@
         height: 45px;
         border-radius: 5px;
         margin-bottom: 20px;
+        outline: none;
+        background: white;
+        font-size: 15px;
+        padding-left: 10px;
     }
-/*------------------------FIM GLOBAIS------------------------------ */
-
-/*======================================= FILTROS ========================================*/
     
     section#background-modal > div#cx-modal > section#filtros{
-        display: flex;
         flex: 1;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    @media (max-width:720px) {
-        section#filtros div{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-    }
-
-    /* ---------------------FILTRO POR TIPO DE CURSO------------------------ */
+    /* ----------------------- FILTRO POR TIPO DE CURSO ------------------------ */
 
     div#cx-modal section#filtros > div#tipo-curso > div{
-        margin-top: 20px;
-        display: flex;
+        margin: 25px 0;
         flex-direction: row;
-        width: 280px;
+        width: 245px;
+        justify-content: space-between;
     }
 
-    @media (min-width:720px) {
-        section#filtros div#tipo-curso div div:last-of-type label{
-            margin-left: 40px;
-        }
+    section#filtros div#tipo-curso div label{
+        margin: 0;
+        align-items: center;
     }
 
     section#filtros div#tipo-curso input[type=checkbox]{
         display: none;
     }
 
-    section#filtros div#tipo-curso div label{
-        margin: 0;
-        display: flex;
-        align-items: center;
-    }
-
-    section#filtros div#tipo-curso div label::before{
+    section#filtros div#tipo-curso div label::before{ /* INPUT CHECKBOX PADRÃO */
         content: "";
         height: 17px;
         width: 17px;
@@ -157,7 +153,7 @@
         margin-right: 5px;
     }
 
-    section#filtros div#tipo-curso div input:checked + label::before{
+    section#filtros div#tipo-curso div input:checked + label::before{ /* INPUT CHECKBOX PADRÃO */
         background: #18ACC4 url(/imgs/checkmark.png) no-repeat;
         background-size: 17px;
         content: "";
@@ -167,19 +163,12 @@
         border-radius:3px;
     }
 
-    /*-------------------FIM FILTRO POR TIPO DE CURSO-----------------------*/
+    /*--------------------- FIM FILTRO POR TIPO DE CURSO ------------------------*/
 
+    /* -------------------------- FILTRO POR PREÇO -------------------------- */
 
-    /* -------------------------- FILTRO POR PREÇO -------------------- */
-    @media(max-width:720px){
-        div#selecao-pode-pagar label{
-            margin-top: 30px;
-        }
-    }
-
-    section#filtros input[type=range]{
+    section#filtros input[type=range]{ /* PERSONALIZAÇÃO DA BARRA DO RANGE */
         margin-top:20px;
-        -webkit-appearance: none;
         width: 100%;
         height: 5px;
         border-radius: 5px;
@@ -187,8 +176,11 @@
         outline: none;
     }
 
-    section#filtros input[type=range]::-webkit-slider-thumb{
+    section#filtros input[type=range]::-webkit-slider-thumb{ /* PERSONALIZAÇÃOD DO CÍRCULO SELETOR DO RANGE */
         -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
         background: #fff;
         width: 30px;
         height: 30px;
@@ -200,10 +192,10 @@
     /* --------------------FIM FILTRO POR PREÇO----------------- */
 
     /* -------------------TOPO AREA DE RESULTADOS -------------- */
+
     section#filtros > div#topo-resultados{
         margin-top: 20px;
         width: 100%;
-        display: flex;
         flex-direction: row;
         border-bottom: 4px solid #EEEFEF;
     }
@@ -214,67 +206,72 @@
         font-size: 18px;
     }
 
-    @media(min-width:720px){
-        section#filtros > div#topo-resultados h2{
-            width: auto;
-        }
-    }
-
     section#filtros > div#topo-resultados div{
-        display: flex;
+        flex-direction: column;
         margin-left: auto;
         align-self: center;
         align-items: flex-end;
     }
     
-    section#filtros > div#topo-resultados div > span{
+    section#filtros > div#topo-resultados div > span,
+    section#filtros > div#topo-resultados div > select{
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 700
     }
 
     section#filtros > div#topo-resultados div > select {
         margin-left: 5px;
-        font-size: 16px;
-        font-weight: 700;
         color:#007A8D ;
         height: 20px;
         border: none;
         outline: none;
+        background: none;
     }
     
-    /* --------------FIM TOPO AREA DE RESULTADOS--------------- */
+    /* ------------------------ FIM TOPO AREA DE RESULTADOS------------------------- */
 
-/*============================== FIM FILTROS =======================================*/
+/*==================================== FIM FILTROS ==================================*/
 
 
-/*================================= RESULTADOS ==================================*/
-    section#resultados > div{
+/*===================================== RESULTADOS =================================*/
+
+    /* ---------------------------- GLOBAIS E REPETIÇÕES -------------------------- */
+    
+    section#resultados > div,
+    section#resultados > div label,
+    div.faculdades label > div,
+    div.faculdades label > div div,
+    div#botoes {
         display: flex;
+    }
+
+    section#resultados > div,
+    section#resultados > div label{
         flex-direction: row;
         align-items: center;
-        margin-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 4px solid #EEEFEF ;
+        width: 100%;
     }
+
+    div.faculdades label > div,
+    div.faculdades label > div div{
+        flex-direction: column;
+    }
+
+    /* Classes adicionadas por diferentes filtros no script "filtros.js" */
+    div.nao-mostrar-facul1, div.nao-mostrar-facul2,
+    div.nao-mostrar-facul3, div.nao-mostrar-facul4 {
+        display: none !important;
+    }
+
+    /* -------------------------- FIM GLOBAIS E REPETIÇÕES ------------------------ */
+
+    /* ----------------------------------- CHECKBOX ------------------------------- */
 
     section#resultados div.faculdades input[type=checkbox]{
         display: none;
     }
-
-    @media(min-width:720px){
-        section#filtros > div#topo-resultados h2{
-            width: auto;
-        }
-    }
-
-    section#resultados > div label{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
     
-    section#resultados div.faculdades label::before{
+    section#resultados div.faculdades label::before{ /* INPUT CHECKBOX NORMAL */
         content: "";
         height: 17px;
         width: 17px;
@@ -282,16 +279,10 @@
         border: 2px solid black;
         border-radius:3px;
         margin: auto 5px auto 0;
-        margin-right: 5px;
-    }
-    
-    @media(max-width:400px){
-        section#resultados div.faculdades label::before{
-            width: 20px;
-        }
-    }
+        margin-right: 12px;
+    } 
 
-    section#resultados div.faculdades input:checked + label::before{
+    section#resultados div.faculdades input:checked + label::before{ /* INPUT CHECKBOX CHECKADO */
         background: #18ACC4 url(/imgs/checkmark.png) no-repeat ;
         background-size: 16px ;
         content: "" ;
@@ -300,54 +291,33 @@
         border-radius:3px ; 
     }
 
+    /* ----------------------------------- FIM CHECKBOX --------------------------- */
+
+    /* ----------------------------- TAMANHOS E FORMATOS -------------------------- */
+    section#resultados > div{
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 4px solid #EEEFEF ;
+    }
+
     section#resultados > div label img {
         width: 100px;
         height: 60px;
         margin: 0;
     }
 
-    @media(min-width:720px){
-        div#cx-modal section#resultados > div label > img {
-            width: 140px;
-            height: 60px;
-        }
-    }
-
-    div.nao-mostrar-facul1, div.nao-mostrar-facul2,
-    div.nao-mostrar-facul3, div.nao-mostrar-facul4 {
-        display: none !important;
-    }
-
     div.faculdades label > div{
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        width: 72%;
-    }
-
-    @media(min-width:720px){
-        div.faculdades label > div{
-            flex-direction: row;
-        }
-    }
-
-    @media(max-width:550px){
-        div.faculdades label > div{
-            width: 65%;
-        }
-    }
-
-    @media(max-width:400px){
-        div.faculdades label > div{
-            width: 45%;
-        }
+        margin-left: 30px;
+        width: 65%;
     }
 
     div.faculdades label > div div{
-        display: flex;
-        flex-direction: column;
         width: 100%;
     }
+
+    /* -------------------------- FIM TAMANHOS E FORMATOS -------------------------- */
+
+    /* --------------------- PERSONALIZAÇÃO DAS INFORMAÇÕES ----------------- */
 
     section#resultados span#curso{
         color: #007A8D;
@@ -362,10 +332,10 @@
         font-weight: 500;
     }
 
-    section#resultados div span#bolsa::before{
-        content: "Bolsa de ";
-        margin: 0;
-        color: #1F2D30;
+    section#resultados div span#preco{
+        display: inline-block;
+        font-weight: 700;
+        color: #0FA866;
     }
 
     section#resultados div span#bolsa{
@@ -374,79 +344,116 @@
         color: #0FA866;
     }
 
-    @media(min-width:720px){
-        section#resultados div span#bolsa{
-            margin-top: 0px;
-            align-self: flex-end;
-        }
-        section#resultados div span#preco{
-            align-self: flex-end;
-        }
-    }
+        /* -------------------------------- ADIÇÃO DE  TEXTOS ------------------------- */
 
-    section#resultados div span#bolsa::after{
-        content: "%";
-    }
+            section#resultados div span#bolsa::before{
+                content: "Bolsa de ";
+                margin: 0;
+                color: #1F2D30;
+            }
 
-    section#resultados div span#preco::before{
-        content: "R$ ";
-    }
+            section#resultados div span#bolsa::after{
+                content: "%";
+            }
 
-    section#resultados div span#preco{
-        display: inline-block;
-        font-weight: 700;
-        color: #0FA866;
-    }
+            section#resultados div span#preco::before{
+                content: "R$ ";
+            }
 
-    section#resultados div span#preco::after{
-        content: "/mês ";
-    }
+            section#resultados div span#preco::after{
+                content: "/mês ";
+            }
 
-/*============================= FIM RESULTADOS =================================*/
+        /* -------------------------------- ADIÇÃO DE  TEXTOS ------------------------- */
+
+    /* ------------------ FIM DA PERSONALIZAÇÃO DAS INFORMAÇÕES ----------------------- */
+
+/*================================= FIM RESULTADOS =====================================*/
+
 
 /*================================= BOTÕES =====================================*/
 
     div#botoes{
         margin-top: 40px;
-        display: flex;
         justify-content: flex-end;
     }
 
-    div#botoes button#cancelar{
-        -webkit-appearance: none;
+    div#botoes button{
+        cursor: pointer;
         font-weight: 700;
-        background: white;
-        border: 2px solid #007A8D;
         height: 50px;
-        width: 110px;
-        color: #007A8D;
-        margin-right: 20px;
         border-radius: 5px;
         font-size: 16px;
     }
 
-    div#botoes button#adicionar{
-        -webkit-appearance: none;
+    div#botoes button#cancelar{
+        background: white;
+        border: 2px solid #007A8D;
+        width: 110px;
+        color: #007A8D;
+        margin-right: 20px;
+    }
+
+    div#botoes button#adicionar_facul_favorita{
         background: #FDCB13;
         border: 2px solid #DE9E1F;
         color: #1E2C30;
         width: 180px;
-        height: 50px;
-        font-weight: 700;
-        border-radius: 5px;
-        font-size: 16px;
     }
 
-    div#botoes button#adicionar:disabled{
-        -webkit-appearance: none;
+    div#botoes button#adicionar_facul_favorita:disabled{ /* BOTÃO DESATIVADO */
+        cursor: auto;
         background: #CACDCD;
         border: 2px solid #81898A;
-        font-weight: 700;
         width: 180px;
-        height: 50px;
         color:#81898A;
-        border-radius: 5px;
-        font-size: 16px;
     }
 
 /*=============================== FIM BOTÕES ====================================*/
+
+
+/*============================== MEDIAS QUERY ===================================*/
+    
+    @media (min-width:550px){
+        section#background-modal{
+            height: 100vh;
+        }
+        section#filtros div#tipo-curso,
+        section#filtros div#selecao-pode-pagar{
+            width: 49%;
+        }
+    }
+
+    @media(min-width:700px){
+        section#filtros div{
+            display: flex;
+            flex-direction: column;
+            width: 49%;
+        }
+    }
+
+    @media(min-width:620px){
+
+        section#resultados > div label > img { /* ALTERA O TAMANHO DA LOGO DA FACULDADE */
+            width: 140px;
+        }
+
+        section#resultados div.faculdades label > div{
+            flex-direction: row;
+            width: 70%;
+        }
+
+        section#resultados div span#bolsa,
+        section#resultados div span#preco{
+            margin-top: 0px;
+            align-self: flex-end;
+        }
+    }
+
+    @media (min-width:750px){
+        section#background-modal > div#cx-modal{
+            width: 750px;
+            top:25%;
+        }
+    }
+
