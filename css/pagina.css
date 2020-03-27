@@ -25,6 +25,10 @@ input, button {
     appearance: none;
 }
 
+input, select, button{
+    cursor: pointer;
+}
+
 /*========================= FIM GLOBAIS =======================*/
 
 /*========================== HEADER ===========================*/
@@ -170,7 +174,6 @@ input, button {
         appearance: none;
         width: auto;
         background: transparent;
-        cursor: pointer;
         border: 0;
     }
 
@@ -252,7 +255,6 @@ input, button {
         }
 
         section#selecao-semestre button{
-            cursor: pointer;
             height: 36px;
             width: 190px;
             border: 2px solid #007A8D;
