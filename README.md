@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+# Página de Bolsas Favoritas do Quero Bolsa
 
-You can use the [editor on GitHub](https://github.com/JVictor07/Quero-bolsa-bolsas_favoritas/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Como executar este projeto ?
+Pensando em trazer uma melhor usabilidade para você, deixei este projeto hospedado neste [Link](https://quero-bolsa-bolsas-favoritas.netlify.com/), então basta apenas clicá-lo e você será direcionado à página = ).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**Obs:** Você pode abri-lo de qualquer dispositivo que desejar, seja ele tablet , celular, computador, notebook e etc... Ele é totalmente responsivo e garanto que não deixará nenhum usuário na mão. Assim como a Quero Bolsa jamais deixou um universitário = )
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Caso o link não funcione.
+ 
+Se o caso o link não direcioná-lo à página, basta apenas fazer o download de todos os arquivos, adicioná-los a uma página e clicar no arquivo index.html = ).
 
-```markdown
-Syntax highlighted code block
+## Marcou uma faculdade como favorita, saiu da página e esqueceu qual havia marcado?
+ 
+Sem problemas, sua faculdade escolhida fica salva no LocalStorage, então você pode sair e voltar da página quantas vezes quiser, que sua faculdade estará lá esperando você.
 
-# Header 1
-## Header 2
-### Header 3
+## Boas práticas
+- Mobile first.
+- Responsividade.
+- Código limpo.
+- HTML semântico.
+- Bons comentários no código.
+- Funções nomeadas de acordo com as tarefas realizadas.
 
-- Bulleted
-- List
+## Linguagens utilizadas:
 
-1. Numbered
-2. List
+ - HTML
+ - CSS
+ - JavaScript
 
-**Bold** and _Italic_ and `Code` text
+## Considerações:
+Foi um grande prazer ter realizado este teste, me fez pensar sobre conceitos importantes na construção de um website como a salvação de informações no LocalStorage do navegador, que soluciona o problema de o usuário ter saído da página e quando retornar, ter que fazer todo o processo que já havia feito. Melhorando assim a usabilidade desses clientes e a estratégia de marketing da empresa.
+Além disso, acredito que o uso do HTML semântico ajudará muito na indexação desta página no Google e, na futura manutenção por um outro desenvolvedor, o que é muito importante em uma equipe.
 
-[Link](url) and ![Image](src)
-```
+## O que eu mudaria? 
+Uma das últimas alterações que faria neste projeto é escrevê-lo na língua inglesa, visto que essa é a língua mais falada do mundo, creio que meu projeto poderia alcançar muito mais pessoas. Porém, devido ao curto espaço de tempo, resolvi escrevê-lo na língua em que tenho maior domínio.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JVictor07/Quero-bolsa-bolsas_favoritas/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Este foi mais um projeto realizado por mim e, caso notou algum erro, ou queira dar algum feedback, será um prazer ouvi-lo.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Feito com <3,
+João Silva
